@@ -1,0 +1,42 @@
+int motor1Pin1 = D5;
+int motor1Pin2 = D6;
+
+int motor2Pin1 = D7;
+int motor2Pin2 = D8;
+
+int rando1 = D3;
+int rando2 = D4;
+
+void setup(){
+  Serial.begin(9600);
+  pinMode(motor1Pin1, OUTPUT);
+  pinMode(motor1Pin2, OUTPUT);
+
+  pinMode(motor2Pin1, OUTPUT);
+  pinMode(motor2Pin2, OUTPUT);
+
+  pinMode(rando1, OUTPUT);
+  pinMode(rando2, OUTPUT); 
+
+  digitalWrite(rando1, HIGH);
+  digitalWrite(rando2, HIGH); 
+}
+
+void loop(){
+  digitalWrite(motor1Pin1, HIGH);
+  digitalWrite(motor1Pin2, LOW);
+
+  digitalWrite(motor2Pin1, HIGH);
+  digitalWrite(motor2Pin2, LOW);
+
+  delay(500);
+
+  digitalWrite(motor1Pin1, LOW);
+  digitalWrite(motor1Pin2, HIGH);
+
+  digitalWrite(motor2Pin1, LOW);
+  digitalWrite(motor2Pin2, HIGH);
+
+  delay(500);
+
+}
